@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Capital Map Diagnostic — Twelve questions about money you already have</title>
+<meta name="description" content="A ten-minute worksheet that shows which of your three capital buckets is doing a job it was never built for. No products, no projections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme:dark;
+    --bg:#141A21;
+    --bg-lift:#1C242D;
+    --line:#3A4753;
+    --paper:#F7F8FA;
+    --navy:#10233B;
+    --teal:#3FBDB3;
+    --teal-deep:#0E7C74;
+    --amber:#E9B03F;
+    --text:#E8EEF4;
+    --text-dim:#AFC0CE;
+  }
+  *{box-sizing:border-box;}
+  img,svg{max-width:100%;}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:"DM Sans","Helvetica Neue",Arial,sans-serif;
+    font-size:16px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px;margin:0 auto;padding:0 28px;}
+  a{color:var(--teal);}
+
+  header{padding:26px 0 0;}
+  .wordmark{font-weight:700;font-size:15px;letter-spacing:-0.01em;}
+  .wordmark em{font-style:normal;color:var(--text-dim);font-weight:400;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;
+    padding:54px 0 64px;align-items:start;
+  }
+  h1{
+    font-size:52px;line-height:1.03;letter-spacing:-0.03em;
+    font-weight:700;margin:0 0 20px;color:#fff;
+  }
+  .lede{font-size:18px;margin:0 0 34px;max-width:30em;color:var(--text);}
+  .lede + p{font-size:15px;color:var(--text-dim);max-width:32em;margin:0;}
+
+  /* ---------- the horizon graphic ---------- */
+  .horizon{margin:38px 0 0;}
+  .bars{display:flex;align-items:flex-end;gap:6px;height:104px;}
+  .bar{position:relative;border-radius:2px 2px 0 0;}
+  .bar.b1{flex:0 0 22%;height:100%;background:var(--teal-deep);}
+  .bar.b2{
+    flex:0 0 34%;height:22%;
+    background:repeating-linear-gradient(
+      -45deg,transparent,transparent 5px,
+      rgba(227,165,44,.28) 5px,rgba(227,165,44,.28) 6px);
+    border:1px dashed var(--amber);border-bottom:none;
+  }
+  .bar.b3{flex:1 1 auto;height:78%;background:#38505F;}
+  .axis{
+    display:flex;justify-content:space-between;gap:10px;margin-top:9px;
+    border-top:1px solid var(--line);padding-top:8px;
+    font-size:13.5px;color:var(--text-dim);
+  }
+  .axis span{white-space:nowrap;}
+  .axis span:nth-child(2){color:var(--amber);}
+  .caption{margin:16px 0 0;font-size:15px;color:var(--text-dim);max-width:30em;}
+
+  /* ---------- form ---------- */
+  .capture{
+    background:var(--bg-lift);border:1px solid var(--line);
+    border-top:3px solid var(--amber);
+    padding:28px 26px 26px;position:sticky;top:24px;
+  }
+  .capture h2{
+    margin:0 0 6px;font-size:20px;font-weight:700;color:#fff;
+    letter-spacing:-0.01em;
+  }
+  .capture .sub{margin:0 0 20px;font-size:14px;color:var(--text-dim);}
+  label{display:block;font-size:14px;margin:0 0 5px;color:var(--text-dim);}
+  .field{margin-bottom:14px;}
+  input,select{
+    width:100%;padding:11px 12px;font:inherit;font-size:16px;
+    background:#0F151B;color:var(--text);
+    border:1px solid var(--line);border-radius:3px;
+    -webkit-appearance:none;appearance:none;
+  }
+  select{
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%23AFC0CE' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 12px center;
+    background-size:12px;
+    padding-right:34px;
+  }
+  /* iOS renders option text using the system palette; set both. */
+  option{background:#0F151B;color:#E8EEF4;}
+  input::placeholder{color:#7E90A0;}
+  input:focus,select:focus{
+    outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal);
+  }
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  button{
+    width:100%;margin-top:6px;padding:13px 16px;
+    font:inherit;font-size:16px;font-weight:700;
+    background:var(--amber);color:#1A1206;
+    border:none;border-radius:3px;cursor:pointer;
+  }
+  button:hover{background:#F0B23C;}
+  button:focus-visible{outline:2px solid #fff;outline-offset:2px;}
+  .fineprint{margin:14px 0 0;font-size:13px;color:var(--text-dim);line-height:1.5;}
+  .hp{position:absolute;left:-9999px;}
+  .err{color:var(--amber);font-size:13px;margin:10px 0 0;display:none;}
+
+  /* success state */
+  .done{display:none;}
+  .done h2{margin-bottom:10px;}
+  .done p{font-size:14.5px;color:var(--text-dim);margin:0 0 18px;}
+  .dl{
+    display:block;text-align:center;padding:13px 16px;
+    background:var(--teal-deep);color:#fff;font-weight:700;
+    text-decoration:none;border-radius:3px;
+  }
+  .dl:hover{background:var(--teal);}
+  .capture.sent .form-body{display:none;}
+  .capture.sent .done{display:block;}
+
+  /* ---------- body sections ---------- */
+  section.band{border-top:1px solid var(--line);padding:52px 0;}
+  h2.sec{
+    font-size:15px;font-weight:500;color:var(--text-dim);
+    margin:0 0 22px;letter-spacing:0;
+  }
+  .inside{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;}
+  .inside h3{
+    font-size:17px;font-weight:700;color:#fff;margin:0 0 7px;
+    padding-top:12px;border-top:2px solid var(--teal-deep);
+  }
+  .inside p{margin:0;font-size:14.5px;color:var(--text-dim);}
+
+  .forwho{max-width:44em;}
+  .forwho p{font-size:16px;margin:0 0 14px;}
+  .forwho p:last-child{margin:0;}
+  .forwho b{color:#fff;font-weight:700;}
+
+  .pull{
+    font-size:23px;line-height:1.35;letter-spacing:-0.015em;
+    color:#fff;max-width:22em;margin:0;
+    padding-left:20px;border-left:3px solid var(--amber);
+  }
+
+  footer{
+    border-top:1px solid var(--line);padding:30px 0 46px;
+    font-size:13px;color:var(--text-dim);line-height:1.6;
+  }
+  footer .who{color:var(--text);font-size:14.5px;margin:0 0 10px;}
+
+  @media (max-width:880px){
+    .hero{grid-template-columns:1fr;gap:40px;padding:36px 0 44px;}
+    h1{font-size:38px;}
+    .capture{position:static;}
+    .inside{grid-template-columns:1fr;gap:26px;}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 18px;}
+    h1{font-size:31px;line-height:1.08;}
+    .lede{font-size:16.5px;}
+    .pull{font-size:19px;padding-left:14px;}
+    .two{grid-template-columns:1fr;gap:0;}
+    .capture{padding:22px 18px;}
+    .axis{font-size:12px;gap:4px;}
+    .bars{height:88px;}
+  }
+  /* A short window would otherwise crop the bottom of the sticky form. */
+  @media (max-height:820px){
+    .capture{position:static;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="wordmark">Capital Strategy <em>/ mybizstrategies.com</em></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+
+    <div>
+      <h1>Three buckets.<br>One of them is empty.</h1>
+      <p class="lede">
+        Almost everyone has money for this month and money for someday.
+        Very few have the money in between — and that is the bucket that
+        decides what the other two are worth.
+      </p>
+      <p>
+        Twelve questions about money you already have. No products, no
+        projections, nothing to sign.
+      </p>
+
+      <div class="horizon" aria-hidden="true">
+        <div class="bars">
+          <div class="bar b1"></div>
+          <div class="bar b2"></div>
+          <div class="bar b3"></div>
+        </div>
+        <div class="axis">
+          <span>0–12 months</span>
+          <span>12–36 months</span>
+          <span>36+ months</span>
+        </div>
+      </div>
+      <p class="caption">
+        The middle bar is the one people find out about at the worst
+        possible time.
+      </p>
+    </div>
+
+    <!-- ---------------- capture ---------------- -->
+    <div class="capture" id="capture">
+      <div class="form-body">
+        <h2>Get the diagnostic</h2>
+        <p class="sub">Two pages, instantly. Print it, answer it in pen, ten minutes.</p>
+
+        <form name="capital-map-diagnostic" id="lead-form"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/thanks">
+          <input type="hidden" name="form-name" value="capital-map-diagnostic">
+          <p class="hp">
+            <label>Leave this empty <input name="bot-field"></label>
+          </p>
+
+          <div class="two">
+            <div class="field">
+              <label for="first">First name</label>
+              <input id="first" name="first_name" type="text"
+                     autocomplete="given-name" required>
+            </div>
+            <div class="field">
+              <label for="last">Last name</label>
+              <input id="last" name="last_name" type="text"
+                     autocomplete="family-name" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email"
+                   autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="lane">What fits you best right now?</label>
+            <select id="lane" name="situation" required>
+              <option value="">Choose one</option>
+              <option>I own a business</option>
+              <option>I'm within a few years of retiring</option>
+              <option>I have a 401(k) or CD I haven't decided about</option>
+              <option>I refer clients to advisors</option>
+              <option>Something else</option>
+            </select>
+          </div>
+
+          <button type="submit">Get the diagnostic</button>
+          <p class="err" id="err">
+            That didn't go through. Try again, or reach out directly.
+          </p>
+
+          <p class="fineprint">
+            No list, no sequence, no sharing your information. [Privacy
+            policy link and required disclosure language go here.]
+          </p>
+        </form>
+      </div>
+
+      <div class="done" id="done">
+        <h2>Here it is</h2>
+        <p>
+          Two pages, ready to print. Answer it in pen — that's the whole
+          exercise.
+        </p>
+        <a class="dl" href="/capital-map-diagnostic.html">Open the diagnostic</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="sec">What's on the two pages</h2>
+    <div class="inside">
+      <div>
+        <h3>Twelve questions</h3>
+        <p>
+          Sorted by how soon you'd need the money — not by account type,
+          and not by what it's invested in.
+        </p>
+      </div>
+      <div>
+        <h3>A coverage ruler</h3>
+        <p>
+          You shade in the months you could actually cover. The gap shows
+          up on paper before anyone says a word about it.
+        </p>
+      </div>
+      <div>
+        <h3>Six yes-or-no checks</h3>
+        <p>
+          Lawsuits, taxes, income, estate. Each one is either handled or
+          it isn't, and most people find at least two that aren't.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="forwho">
+      <p class="pull">
+        If you had to check a statement to answer the question, that
+        money isn't planned. It accumulated.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2 class="sec">Who this is actually for</h2>
+    <div class="forwho">
+      <p>
+        <b>Business owners</b> whose personal balance sheet and company
+        balance sheet have quietly become the same balance sheet.
+      </p>
+      <p>
+        <b>People a few years out from retiring</b> with a CD ladder, a
+        401(k) from a job they left, and no clear answer for which one
+        pays the first year of bills.
+      </p>
+      <p>
+        <b>Anyone who has been told they're "conservative"</b> when what
+        they really are is undecided.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="who">contact@mybizstrategies.com</p>
+    <p>
+      [Securities offered through — broker-dealer disclosure, advisory
+      affiliation, and any required approval reference go here before
+      this page goes live.]
+      This worksheet is general educational material and is not
+      investment, tax, or legal advice. It does not account for your
+      individual circumstances.
+    </p>
+    <p>&copy; 2026 Capital Strategy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Submit to Netlify Forms without leaving the page, then reveal the
+  // download. Falls back to the form's action attribute if JS is off.
+  var form = document.getElementById('lead-form');
+  var box  = document.getElementById('capture');
+  var err  = document.getElementById('err');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    err.style.display = 'none';
+
+    var btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function (r) {
+      if (!r.ok) throw new Error('bad response');
+      box.classList.add('sent');
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Get the diagnostic';
+      err.style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
