@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Think About Debt When You Own the Business — myBizStrategies</title>
+<meta name="description" content="Most owners think about debt the way they were taught to think about it personally. Business debt operates under different math.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C5A55A; --gold-light: #D9C484; --gold-dim: rgba(197,165,90,0.12); --gold-glow: rgba(197,165,90,0.06);
+  --dark: #0A0A09; --dark-elevated: #111110; --dark-card: #161614; --dark-border: #1E1E1C; --dark-border-light: #2A2A27;
+  --text-hero: #F5F2EB; --text-primary: #E0DCD3; --text-secondary: #9C9789; --text-muted: #6B6760; --white: #FFFFFF;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body { font-family:'Libre Franklin', sans-serif; background:var(--dark); color:var(--text-primary); line-height:1.75; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.container { max-width:1100px; margin:0 auto; padding:0 2rem; }
+.container-narrow { max-width:720px; margin:0 auto; padding:0 2rem; }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 0; background:rgba(10,10,9,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--dark-border); }
+nav .container { display:flex; align-items:center; justify-content:space-between; }
+.nav-brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:var(--text-hero); }
+.nav-brand-mark { width:28px; height:28px; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display', serif; font-size:0.8rem; font-weight:600; color:var(--gold); }
+.nav-brand-text { font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:500; letter-spacing:0.03em; }
+.nav-links { display:flex; align-items:center; gap:2.2rem; }
+.nav-links a { text-decoration:none; color:var(--text-secondary); font-size:0.82rem; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.25s; }
+.nav-links a:hover { color:var(--gold-light); }
+.nav-links a.active { color:var(--gold); }
+.article-header { padding:11rem 0 3rem; position:relative; overflow:hidden; }
+.article-header::before { content:''; position:absolute; top:-20%; right:-15%; width:50vw; height:50vw; background:radial-gradient(circle, var(--gold-glow) 0%, transparent 65%); pointer-events:none; }
+.article-header-content { position:relative; z-index:1; }
+.article-category { font-size:0.72rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem; display:flex; align-items:center; gap:1rem; }
+.article-category::before { content:''; display:block; width:40px; height:1px; background:var(--gold); }
+.article-header h1 { font-family:'Playfair Display', serif; font-size:clamp(2rem, 4.2vw, 3rem); font-weight:500; line-height:1.25; color:var(--text-hero); margin-bottom:1.2rem; }
+.article-dek { font-size:1.05rem; font-weight:300; color:var(--text-secondary); line-height:1.8; max-width:640px; }
+.article-body { padding:2rem 0 5rem; }
+.article-body p { font-size:1.05rem; color:var(--text-primary); margin-bottom:1.6rem; line-height:1.85; }
+.article-body h2 { font-family:'Playfair Display', serif; font-size:1.5rem; font-weight:500; color:var(--text-hero); margin:3rem 0 1.2rem; line-height:1.35; }
+.article-body ol { margin:0 0 1.8rem 0; padding:0; list-style:none; counter-reset:step; }
+.article-body ol li { position:relative; padding-left:2.4rem; margin-bottom:1.3rem; font-size:1.02rem; color:var(--text-primary); line-height:1.75; counter-increment:step; }
+.article-body ol li::before { content:counter(step); position:absolute; left:0; top:0; width:1.6rem; height:1.6rem; border:1px solid var(--gold); color:var(--gold); font-size:0.8rem; font-weight:600; display:flex; align-items:center; justify-content:center; }
+.article-body strong { color:var(--text-hero); font-weight:600; }
+.article-close { border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:2.5rem; }
+.disclosure { font-size:0.8rem; color:var(--text-muted); font-style:italic; line-height:1.7; border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:1.5rem; }
+.back-link { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-secondary); text-decoration:none; margin-bottom:2.5rem; margin-top:6rem; transition:color 0.25s; }
+.back-link:hover { color:var(--gold-light); }
+footer { border-top:1px solid var(--dark-border); padding:2.5rem 0 3rem; font-size:0.8rem; color:var(--text-muted); line-height:1.7; }
+footer .who { color:var(--text-secondary); font-size:0.85rem; margin:0 0 0.7rem; }
+@media (max-width:640px) { .container, .container-narrow { padding:0 1.3rem; } .article-header { padding:8.5rem 0 2.5rem; } .nav-links { gap:1.2rem; } .nav-links a { font-size:0.72rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-mark">m</div>
+      <div class="nav-brand-text">myBizStrategies</div>
+    </a>
+    <div class="nav-links">
+      <a href="/#domains">The Six Domains</a>
+      <a href="/#capital-map">Capital Map</a>
+      <a href="/insights" class="active">Insights</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container-narrow article-header-content">
+    <a href="/insights" class="back-link" style="margin-top:0;">&larr; All Insights</a>
+    <div class="article-category">Capital Structure</div>
+    <h1>How to Think About Debt When You Own the Business</h1>
+    <p class="article-dek">Most owners think about debt the way they were taught to think about it personally. Business debt operates under different math.</p>
+  </div>
+</header>
+
+<section class="article-body">
+  <div class="container-narrow">
+
+    <p class="lede">Most owners think about debt the way they were taught to think about it personally: avoid it, pay it off fast, treat zero as the goal.</p>
+
+    <p>That instinct serves a household well. Applied uncritically to a business, it often leaves real value on the table &mdash; and sometimes creates more risk than the debt itself would have.</p>
+
+    <h2>Personal debt logic doesn't transfer cleanly</h2>
+    <p>The reasoning behind minimizing personal debt is straightforward: it's expensive relative to what most personal assets earn, and less of it means less that can go wrong. Business debt operates under different math. Business debt is frequently tax-deductible, often available at rates the business itself could never generate by sitting on cash instead, and &mdash; used well &mdash; a tool for growth the business couldn't otherwise fund as quickly.</p>
+    <p>None of that makes debt automatically good. It makes "debt is bad, full stop" the wrong starting question. The better question is what a specific piece of debt is actually financing, and whether that use justifies the cost and risk of carrying it.</p>
+
+    <h2>The distinction that actually matters</h2>
+    <p>Not all business debt serves the same function, and treating it as one undifferentiated category is where the thinking usually goes wrong.</p>
+    <p><strong>Debt that funds growth with a clear return.</strong> Financing equipment that expands capacity, or a facility that supports revenue the business has already demonstrated it can generate, is fundamentally different from debt that plugs a hole. If the return on what's being financed clearly exceeds the cost of the debt, carrying it can be the financially efficient choice &mdash; even when a business technically has the cash to pay in full.</p>
+    <p><strong>Debt that funds a gap, not a plan.</strong> Debt taken on because cash flow is tight, without a clear line to what it improves, is a different animal &mdash; this is the kind that tends to compound into a real problem, because it isn't attached to anything that pays it back beyond hoping conditions improve.</p>
+    <p><strong>Debt sized to survive a bad year, not just a good one.</strong> The debt load that looks completely reasonable against last year's numbers can look very different against a slower year &mdash; and business cycles guarantee a slower year eventually shows up. Sizing debt against a conservative scenario, not the best recent year, is what separates leverage that helps from leverage that eventually hurts.</p>
+
+    <h2>The personal guarantee question</h2>
+    <p>Nearly every meaningful piece of business debt &mdash; credit lines, commercial mortgages, SBA loans, most equipment financing &mdash; comes with a personal guarantee attached, whether or not the owner still thinks about it that way years later. This means business debt decisions are never purely business decisions. Personal wealth built outside the business is functioning as collateral for the business's obligations, whether or not that was the intent when the paperwork was signed.</p>
+    <p>This is worth revisiting periodically, not just at the moment debt is taken on. A guarantee that felt reasonable when the business was smaller and net worth outside it was minimal is a very different exposure once significant personal wealth has accumulated. What was once a modest personal risk can quietly become a large one, purely because the other side of the balance sheet has grown.</p>
+
+    <h2>A more useful framework than "pay it off"</h2>
+    <p>Rather than treating debt reduction as an automatic goal, three questions tend to produce better decisions:</p>
+    <ol>
+      <li><strong>What is this specific debt financing, and does that use generate more value than the debt costs?</strong> If yes, paying it off early isn't obviously the right move just because debt-free feels safer.</li>
+      <li><strong>Is the debt sized for a bad year, not just the current one?</strong> If a downturn would make this debt genuinely dangerous rather than just uncomfortable, that's a sizing problem worth addressing regardless of what it's financing.</li>
+      <li><strong>What does this debt put at risk personally, given where net worth stands today?</strong> Not where it stood when the debt was taken on &mdash; a guarantee worth reviewing every few years, not just at signing.</li>
+    </ol>
+
+    <div class="article-close">
+      <h2 style="margin-top:0;">The real goal isn't zero debt</h2>
+      <p>It's debt that's doing identifiable work, sized to survive a bad year, with a clear-eyed view of what it puts at risk outside the business. Some owners will look at that framework and conclude they're carrying too much. Others will realize they've been overpaying down debt that was actually financing real value, at the cost of capital that could have been building wealth somewhere else in the meantime. Both are common. Neither is obvious without actually running the analysis.</p>
+    </div>
+
+    <p class="disclosure">This is general educational material and is not investment, tax, or legal advice. It does not account for your individual circumstances.</p>
+
+    <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="who">myBizStrategies</p>
+    <p>[Broker-dealer disclosure, securities-offered-through language, and any required approval reference go here before this piece is distributed.]</p>
+    <p style="margin-top:0.8rem;">&copy; 2026 Capital Strategy. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
