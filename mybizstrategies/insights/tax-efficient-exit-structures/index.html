@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax-Efficient Exit Structures: A Framework — myBizStrategies</title>
+<meta name="description" content="The gap between what business owners pay and what they're required to pay is usually six figures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C5A55A; --gold-light: #D9C484; --gold-dim: rgba(197,165,90,0.12); --gold-glow: rgba(197,165,90,0.06);
+  --dark: #0A0A09; --dark-elevated: #111110; --dark-card: #161614; --dark-border: #1E1E1C; --dark-border-light: #2A2A27;
+  --text-hero: #F5F2EB; --text-primary: #E0DCD3; --text-secondary: #9C9789; --text-muted: #6B6760; --white: #FFFFFF;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body { font-family:'Libre Franklin', sans-serif; background:var(--dark); color:var(--text-primary); line-height:1.75; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.container { max-width:1100px; margin:0 auto; padding:0 2rem; }
+.container-narrow { max-width:720px; margin:0 auto; padding:0 2rem; }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 0; background:rgba(10,10,9,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--dark-border); }
+nav .container { display:flex; align-items:center; justify-content:space-between; }
+.nav-brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:var(--text-hero); }
+.nav-brand-mark { width:28px; height:28px; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display', serif; font-size:0.8rem; font-weight:600; color:var(--gold); }
+.nav-brand-text { font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:500; letter-spacing:0.03em; }
+.nav-links { display:flex; align-items:center; gap:2.2rem; }
+.nav-links a { text-decoration:none; color:var(--text-secondary); font-size:0.82rem; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.25s; }
+.nav-links a:hover { color:var(--gold-light); }
+.nav-links a.active { color:var(--gold); }
+.article-header { padding:11rem 0 3rem; position:relative; overflow:hidden; }
+.article-header::before { content:''; position:absolute; top:-20%; right:-15%; width:50vw; height:50vw; background:radial-gradient(circle, var(--gold-glow) 0%, transparent 65%); pointer-events:none; }
+.article-header-content { position:relative; z-index:1; }
+.article-category { font-size:0.72rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem; display:flex; align-items:center; gap:1rem; }
+.article-category::before { content:''; display:block; width:40px; height:1px; background:var(--gold); }
+.article-header h1 { font-family:'Playfair Display', serif; font-size:clamp(2rem, 4.2vw, 3rem); font-weight:500; line-height:1.25; color:var(--text-hero); margin-bottom:1.2rem; }
+.article-dek { font-size:1.05rem; font-weight:300; color:var(--text-secondary); line-height:1.8; max-width:640px; }
+.article-body { padding:2rem 0 5rem; }
+.article-body p { font-size:1.05rem; color:var(--text-primary); margin-bottom:1.6rem; line-height:1.85; }
+.article-body h2 { font-family:'Playfair Display', serif; font-size:1.5rem; font-weight:500; color:var(--text-hero); margin:3rem 0 1.2rem; line-height:1.35; }
+.article-body .lede { font-size:1.25rem; color:var(--text-hero); font-weight:400; line-height:1.7; margin-bottom:2rem; }
+.article-body strong { color:var(--text-hero); font-weight:600; }
+.article-close { border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:2.5rem; }
+.disclosure { font-size:0.8rem; color:var(--text-muted); font-style:italic; line-height:1.7; border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:1.5rem; }
+.back-link { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-secondary); text-decoration:none; margin-bottom:2.5rem; margin-top:6rem; transition:color 0.25s; }
+.back-link:hover { color:var(--gold-light); }
+footer { border-top:1px solid var(--dark-border); padding:2.5rem 0 3rem; font-size:0.8rem; color:var(--text-muted); line-height:1.7; }
+footer .who { color:var(--text-secondary); font-size:0.85rem; margin:0 0 0.7rem; }
+@media (max-width:640px) { .container, .container-narrow { padding:0 1.3rem; } .article-header { padding:8.5rem 0 2.5rem; } .nav-links { gap:1.2rem; } .nav-links a { font-size:0.72rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-mark">m</div>
+      <div class="nav-brand-text">myBizStrategies</div>
+    </a>
+    <div class="nav-links">
+      <a href="/#domains">The Six Domains</a>
+      <a href="/#capital-map">Capital Map</a>
+      <a href="/insights" class="active">Insights</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container-narrow article-header-content">
+    <a href="/insights" class="back-link" style="margin-top:0;">&larr; All Insights</a>
+    <div class="article-category">Tax Strategy</div>
+    <h1>Tax-Efficient Exit Structures: A Framework</h1>
+    <p class="article-dek">The gap between what business owners pay and what they're required to pay is usually six figures.</p>
+  </div>
+</header>
+
+<section class="article-body">
+  <div class="container-narrow">
+
+    <p class="lede">The gap between what business owners pay in taxes on a sale and what they're actually required to pay is usually six figures. Sometimes more.</p>
+
+    <p>The difference isn't aggressive planning or gray-area strategy. It's almost always timing &mdash; structures that needed to be in place months or years before a deal, not decisions made during it.</p>
+
+    <h2>Why the timing problem is the whole problem</h2>
+    <p>Most of the meaningful tax efficiency available in a business sale isn't available at the closing table. By the time a letter of intent is signed, the structural decisions that would have mattered most are frequently already off the table &mdash; not because they were considered and rejected, but because nobody raised them early enough for them to be possible.</p>
+    <p>This is the core frustration of exit tax planning: the strategies that create the largest difference in outcome require lead time, and lead time is exactly what's missing when a deal materializes faster than expected, or when tax planning was never on the radar until a buyer showed up.</p>
+
+    <h2>The categories worth understanding, generally</h2>
+    <p>None of what follows is a recommendation for any specific owner's situation &mdash; every one of these depends heavily on entity structure, timing, and individual facts that only a tax advisor reviewing the specifics can evaluate. But understanding the categories is what allows an owner to ask the right questions early enough for them to matter.</p>
+    <p><strong>Entity structure and holding period.</strong> How a business is legally structured, and for how long, materially affects what portion of a sale is taxed as ordinary income versus at more favorable rates. Some structures only become advantageous after being held a specific number of years &mdash; which is precisely why they need to be considered well before a sale is on the horizon, not after.</p>
+    <p><strong>Timing the transaction itself.</strong> The tax year a sale closes in, how proceeds are received (all at once versus over time), and what else is happening in an owner's broader tax picture that year can shift the effective rate meaningfully. A sale that closes in December looks very different, tax-wise, than economically identical terms that close six weeks later in January.</p>
+    <p><strong>Charitable and estate-coordinated structures.</strong> For owners with philanthropic intent or a desire to move wealth to the next generation efficiently, certain structures can accomplish both a tax outcome and a legacy goal at once &mdash; but these generally require setup well in advance of a sale, not as a closing-week addition.</p>
+    <p><strong>Installment and deferred structures.</strong> Receiving proceeds over time rather than as a single lump sum changes both the tax timing and the risk profile of the sale. This isn't automatically better or worse &mdash; it's a tradeoff between certainty and tax deferral that depends on the buyer, the deal terms, and the seller's own liquidity needs.</p>
+
+    <h2>The pattern behind the missed opportunities</h2>
+    <p>Almost every version of "I wish I'd known that before I sold" traces back to the same root cause: the tax conversation started after the deal conversation, instead of before it. A CPA who specializes in exit planning, brought in a year or two ahead of a possible sale, is working with a fundamentally different set of options than one brought in during due diligence.</p>
+    <p>This is also why "I don't have a specific sale planned yet" is exactly the wrong reason to delay the conversation. The owners who preserve the most optionality are the ones who treat exit-tax structure as something to understand years before a transaction is likely, not something to solve once one is already in motion.</p>
+
+    <div class="article-close">
+      <h2 style="margin-top:0;">What this actually means in practice</h2>
+      <p>It doesn't mean every owner needs an elaborate structure today. It means the question "if I sold in the next two to three years, would my current structure even allow for tax-efficient treatment" is worth asking now, while there's still time for the answer to matter. For most owners, that's a short conversation with a tax advisor &mdash; not a project. For the ones where the answer is no, it's the most valuable short conversation they'll have all year.</p>
+    </div>
+
+    <p class="disclosure">This is general educational material and is not investment, tax, or legal advice. It does not account for your individual circumstances.</p>
+
+    <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="who">myBizStrategies</p>
+    <p>[Broker-dealer disclosure, securities-offered-through language, and any required approval reference go here before this piece is distributed.]</p>
+    <p style="margin-top:0.8rem;">&copy; 2026 Capital Strategy. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
