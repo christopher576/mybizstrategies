@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Three Balance Sheets Every Business Owner Has — myBizStrategies</title>
+<meta name="description" content="Most business owners think about one balance sheet. Over time, a second emerges. Then a third.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C5A55A; --gold-light: #D9C484; --gold-dim: rgba(197,165,90,0.12); --gold-glow: rgba(197,165,90,0.06);
+  --dark: #0A0A09; --dark-elevated: #111110; --dark-card: #161614; --dark-border: #1E1E1C; --dark-border-light: #2A2A27;
+  --text-hero: #F5F2EB; --text-primary: #E0DCD3; --text-secondary: #9C9789; --text-muted: #6B6760; --white: #FFFFFF;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body { font-family:'Libre Franklin', sans-serif; background:var(--dark); color:var(--text-primary); line-height:1.75; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.container { max-width:1100px; margin:0 auto; padding:0 2rem; }
+.container-narrow { max-width:720px; margin:0 auto; padding:0 2rem; }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 0; background:rgba(10,10,9,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--dark-border); }
+nav .container { display:flex; align-items:center; justify-content:space-between; }
+.nav-brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:var(--text-hero); }
+.nav-brand-mark { width:28px; height:28px; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display', serif; font-size:0.8rem; font-weight:600; color:var(--gold); }
+.nav-brand-text { font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:500; letter-spacing:0.03em; }
+.nav-links { display:flex; align-items:center; gap:2.2rem; }
+.nav-links a { text-decoration:none; color:var(--text-secondary); font-size:0.82rem; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.25s; }
+.nav-links a:hover { color:var(--gold-light); }
+.nav-links a.active { color:var(--gold); }
+.article-header { padding:11rem 0 3rem; position:relative; overflow:hidden; }
+.article-header::before { content:''; position:absolute; top:-20%; right:-15%; width:55vw; height:55vw; background:radial-gradient(circle, var(--gold-glow) 0%, transparent 65%); pointer-events:none; }
+.article-header-content { position:relative; z-index:1; }
+.article-category { font-size:0.72rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem; display:flex; align-items:center; gap:1rem; }
+.article-category::before { content:''; display:block; width:40px; height:1px; background:var(--gold); }
+.article-header h1 { font-family:'Playfair Display', serif; font-size:clamp(2.1rem, 4.6vw, 3.4rem); font-weight:500; line-height:1.2; color:var(--text-hero); margin-bottom:1.2rem; }
+.article-dek { font-size:1.1rem; font-weight:300; color:var(--text-secondary); line-height:1.8; max-width:660px; }
+.article-body { padding:2rem 0 5rem; }
+.article-body p { font-size:1.08rem; color:var(--text-primary); margin-bottom:1.7rem; line-height:1.9; }
+.article-body h2 { font-family:'Playfair Display', serif; font-size:1.6rem; font-weight:500; color:var(--text-hero); margin:3.2rem 0 1.3rem; line-height:1.35; }
+.article-body .lede { font-size:1.35rem; color:var(--text-hero); font-weight:400; line-height:1.7; margin-bottom:2.2rem; }
+.article-body strong { color:var(--text-hero); font-weight:600; }
+.article-body em { color:var(--gold-light); font-style:normal; }
+.tier-table { width:100%; border-collapse:collapse; margin:2rem 0 2.5rem; border:1px solid var(--dark-border); }
+.tier-table th { text-align:left; font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); padding:0.9rem 1.2rem; border-bottom:1px solid var(--dark-border-light); background:var(--dark-elevated); }
+.tier-table td { padding:1rem 1.2rem; font-size:0.92rem; color:var(--text-primary); border-bottom:1px solid var(--dark-border); vertical-align:top; }
+.tier-table tr:last-child td { border-bottom:none; }
+.tier-table td:first-child { color:var(--gold-light); font-weight:600; white-space:nowrap; }
+.stat-line { font-family:'Playfair Display', serif; font-size:1.4rem; color:var(--text-hero); border-left:3px solid var(--gold); padding:0.3rem 0 0.3rem 1.5rem; margin:2.5rem 0; line-height:1.5; }
+.article-close { border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:2.5rem; }
+.disclosure { font-size:0.8rem; color:var(--text-muted); font-style:italic; line-height:1.7; border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:1.5rem; }
+.back-link { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-secondary); text-decoration:none; margin-bottom:2.5rem; margin-top:6rem; transition:color 0.25s; }
+.back-link:hover { color:var(--gold-light); }
+footer { border-top:1px solid var(--dark-border); padding:2.5rem 0 3rem; font-size:0.8rem; color:var(--text-muted); line-height:1.7; }
+footer .who { color:var(--text-secondary); font-size:0.85rem; margin:0 0 0.7rem; }
+@media (max-width:640px) { .container, .container-narrow { padding:0 1.3rem; } .article-header { padding:8.5rem 0 2.5rem; } .nav-links { gap:1.2rem; } .nav-links a { font-size:0.72rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-mark">m</div>
+      <div class="nav-brand-text">myBizStrategies</div>
+    </a>
+    <div class="nav-links">
+      <a href="/#domains">The Six Domains</a>
+      <a href="/#capital-map">Capital Map</a>
+      <a href="/insights" class="active">Insights</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container-narrow article-header-content">
+    <a href="/insights" class="back-link" style="margin-top:0;">&larr; All Insights</a>
+    <div class="article-category">Featured</div>
+    <h1>The Three Balance Sheets Every Business Owner Has</h1>
+    <p class="article-dek">Three balance sheets. Three different risk profiles. Three different time horizons. One owner, managing all of them with a single set of assumptions that usually only fits one of the three.</p>
+  </div>
+</header>
+
+<section class="article-body">
+  <div class="container-narrow">
+
+    <p class="lede">Most business owners think about one balance sheet. The business.</p>
+
+    <p>Over time, a second one emerges &mdash; personal assets: the house, the investment accounts, the retirement plan. Things the business funded but that live outside it now. Then there's a third: the household. Cash flow, lifestyle expenses, obligations that don't stop if the business slows down for a quarter or a year.</p>
+
+    <p>Three balance sheets. Three different risk profiles. Three different time horizons. One owner, managing all of them with a single set of assumptions that usually only fits one of the three.</p>
+
+    <h2>Why this goes unnoticed for years</h2>
+    <p>Nobody sits down and decides to run three balance sheets as if they were one. It happens by default, because for most of a business's life, the three are genuinely intertwined &mdash; the owner's income <em>is</em> the business's performance, the household's spending <em>is</em> funded by whatever the business throws off that month, and personal savings <em>are</em> whatever's left over after the business's needs are met. Treating them as one thing isn't a mistake in the early years. It's just how a growing business actually works.</p>
+    <p>The trouble starts once the business succeeds enough that the three balance sheets no longer move together automatically &mdash; and nobody notices, because the single-assumption habit is by now years old and invisible.</p>
+
+    <h2>What each one is actually for</h2>
+    <table class="tier-table">
+      <thead>
+        <tr><th>Balance Sheet</th><th>What it holds</th><th>Time horizon</th><th>When mismanaged</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Business</td>
+          <td>Working capital, equipment, receivables, the enterprise value itself</td>
+          <td>Tied to the business cycle</td>
+          <td>Undercapitalized operations, or capital trapped that should have been distributed</td>
+        </tr>
+        <tr>
+          <td>Personal</td>
+          <td>Investment accounts, real estate, retirement plans &mdash; funded by the business but legally separate</td>
+          <td>Genuinely long-term, often decades</td>
+          <td>Personal assets carrying business-style risk when they were meant to be the stable counterweight</td>
+        </tr>
+        <tr>
+          <td>Household</td>
+          <td>Ongoing cash flow, lifestyle spending, family obligations</td>
+          <td>Immediate and continuous</td>
+          <td>Lifestyle spending quietly funded from long-term or business capital instead of a dedicated source</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Most owners can describe their business balance sheet in detail. Fewer can describe their personal one with the same precision. Almost none have ever separated the household's actual cash-flow needs from the other two &mdash; which is exactly where the mismanagement tends to start.</p>
+
+    <h2>The mistake that shows up most often</h2>
+    <p>The most common failure is treating personal or household decisions with business-balance-sheet logic, or the reverse &mdash; funding household cash flow out of capital that was meant to be long-term growth money. Both directions of confusion tend to look reasonable in the moment. A business owner who is comfortable with risk and illiquidity in the business often carries that same comfort into personal investing, even though the personal balance sheet was supposed to be the part of the picture that <em>didn't</em> depend on the business being right. Equally common: treating a strong business year as household income that can be spent freely, without separating what's genuinely available from what needs to stay working.</p>
+
+    <p class="stat-line">For many successful owners, 80 to 90 percent of net worth sits inside operating business assets well past the point where that concentration was a deliberate, examined choice.</p>
+
+    <p>It became the default, not a decision &mdash; and defaults rarely get revisited on their own.</p>
+
+    <div class="article-close">
+      <h2 style="margin-top:0;">Separating the three is the first step</h2>
+      <p>This doesn't require three separate financial lives or three sets of advisors who never talk to each other &mdash; in fact, the opposite is usually true, since the person coordinating across all three is what actually makes separation useful rather than just complicated. What it requires is naming, honestly, which balance sheet a given dollar actually belongs to, and holding it to that balance sheet's own time horizon and risk tolerance instead of whichever one is most convenient in the moment.</p>
+      <p>A rough first pass: can you state, right now, what portion of your household's monthly needs are covered by something other than the business's current performance? Can you describe your personal balance sheet's actual risk level, separately from how you think about risk inside the business? If either question is hard to answer quickly, that's not a personal failing &mdash; it's the default most owners are operating from. Naming it is what starts to change it.</p>
+    </div>
+
+    <p class="disclosure">This is general educational material and is not investment, tax, or legal advice. It does not account for your individual circumstances.</p>
+
+    <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="who">myBizStrategies</p>
+    <p>[Broker-dealer disclosure, securities-offered-through language, and any required approval reference go here before this piece is distributed.]</p>
+    <p style="margin-top:0.8rem;">&copy; 2026 Capital Strategy. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
