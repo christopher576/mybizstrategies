@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Many Entrepreneurs Hold Too Much Cash — myBizStrategies</title>
+<meta name="description" content="Operating discipline ends at the company checking account. The opportunity cost of misallocated cash over a decade is a real number.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C5A55A;
+  --gold-light: #D9C484;
+  --gold-dim: rgba(197,165,90,0.12);
+  --gold-glow: rgba(197,165,90,0.06);
+  --dark: #0A0A09;
+  --dark-elevated: #111110;
+  --dark-card: #161614;
+  --dark-border: #1E1E1C;
+  --dark-border-light: #2A2A27;
+  --text-hero: #F5F2EB;
+  --text-primary: #E0DCD3;
+  --text-secondary: #9C9789;
+  --text-muted: #6B6760;
+  --white: #FFFFFF;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  font-family:'Libre Franklin', sans-serif;
+  background:var(--dark);
+  color:var(--text-primary);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container { max-width:1100px; margin:0 auto; padding:0 2rem; }
+.container-narrow { max-width:720px; margin:0 auto; padding:0 2rem; }
+
+/* NAV — identical to homepage/insights */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding:1.5rem 0;
+  background:rgba(10,10,9,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--dark-border);
+}
+nav .container { display:flex; align-items:center; justify-content:space-between; }
+.nav-brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:var(--text-hero); }
+.nav-brand-mark {
+  width:28px; height:28px; border:1.5px solid var(--gold);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Playfair Display', serif; font-size:0.8rem; font-weight:600; color:var(--gold);
+}
+.nav-brand-text { font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:500; letter-spacing:0.03em; }
+.nav-links { display:flex; align-items:center; gap:2.2rem; }
+.nav-links a {
+  text-decoration:none; color:var(--text-secondary); font-size:0.82rem;
+  font-weight:400; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.25s;
+}
+.nav-links a:hover { color:var(--gold-light); }
+.nav-links a.active { color:var(--gold); }
+
+/* ARTICLE HEADER */
+.article-header {
+  padding:11rem 0 3rem; position:relative; overflow:hidden;
+}
+.article-header::before {
+  content:''; position:absolute; top:-20%; right:-15%;
+  width:50vw; height:50vw;
+  background:radial-gradient(circle, var(--gold-glow) 0%, transparent 65%);
+  pointer-events:none;
+}
+.article-header-content { position:relative; z-index:1; }
+.article-category {
+  font-size:0.72rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--gold); margin-bottom:1.5rem; display:flex; align-items:center; gap:1rem;
+}
+.article-category::before {
+  content:''; display:block; width:40px; height:1px; background:var(--gold);
+}
+.article-header h1 {
+  font-family:'Playfair Display', serif; font-size:clamp(2rem, 4.2vw, 3rem);
+  font-weight:500; line-height:1.25; color:var(--text-hero); margin-bottom:1.2rem;
+}
+.article-dek {
+  font-size:1.05rem; font-weight:300; color:var(--text-secondary); line-height:1.8; max-width:640px;
+}
+
+/* ARTICLE BODY */
+.article-body { padding:2rem 0 5rem; }
+.article-body p {
+  font-size:1.05rem; color:var(--text-primary); margin-bottom:1.6rem; line-height:1.85;
+}
+.article-body h2 {
+  font-family:'Playfair Display', serif; font-size:1.5rem; font-weight:500;
+  color:var(--text-hero); margin:3rem 0 1.2rem; line-height:1.35;
+}
+.article-body .lede {
+  font-size:1.25rem; color:var(--text-hero); font-weight:400; line-height:1.7;
+  margin-bottom:2rem;
+}
+.article-body ul {
+  margin:0 0 1.8rem 0; padding:0; list-style:none;
+}
+.article-body ul li {
+  position:relative; padding-left:1.6rem; margin-bottom:1.1rem;
+  font-size:1.02rem; color:var(--text-primary); line-height:1.75;
+}
+.article-body ul li::before {
+  content:''; position:absolute; left:0; top:0.65rem;
+  width:6px; height:6px; background:var(--gold); border-radius:50%;
+}
+.article-body strong { color:var(--text-hero); font-weight:600; }
+
+/* TABLE */
+.tier-table {
+  width:100%; border-collapse:collapse; margin:2rem 0 2.5rem;
+  border:1px solid var(--dark-border);
+}
+.tier-table th {
+  text-align:left; font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--gold); padding:0.9rem 1.2rem; border-bottom:1px solid var(--dark-border-light);
+  background:var(--dark-elevated);
+}
+.tier-table td {
+  padding:1rem 1.2rem; font-size:0.95rem; color:var(--text-primary);
+  border-bottom:1px solid var(--dark-border); vertical-align:top;
+}
+.tier-table tr:last-child td { border-bottom:none; }
+.tier-table td:nth-child(2) { color:var(--gold-light); font-weight:600; white-space:nowrap; }
+
+/* PULL QUOTE / CLOSE */
+.article-close {
+  border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:2.5rem;
+}
+.disclosure {
+  font-size:0.8rem; color:var(--text-muted); font-style:italic; line-height:1.7;
+  border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:1.5rem;
+}
+
+/* BACK LINK */
+.back-link {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--text-secondary); text-decoration:none; margin-bottom:2.5rem; margin-top:6rem;
+  transition:color 0.25s;
+}
+.back-link:hover { color:var(--gold-light); }
+
+/* FOOTER */
+footer {
+  border-top:1px solid var(--dark-border); padding:2.5rem 0 3rem;
+  font-size:0.8rem; color:var(--text-muted); line-height:1.7;
+}
+footer .who { color:var(--text-secondary); font-size:0.85rem; margin:0 0 0.7rem; }
+
+@media (max-width:640px) {
+  .container, .container-narrow { padding:0 1.3rem; }
+  .article-header { padding:8.5rem 0 2.5rem; }
+  .nav-links { gap:1.2rem; }
+  .nav-links a { font-size:0.72rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-mark">m</div>
+      <div class="nav-brand-text">myBizStrategies</div>
+    </a>
+    <div class="nav-links">
+      <a href="/#domains">The Six Domains</a>
+      <a href="/#capital-map">Capital Map</a>
+      <a href="/insights" class="active">Insights</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container-narrow article-header-content">
+    <a href="/insights" class="back-link" style="margin-top:0;">&larr; All Insights</a>
+    <div class="article-category">Capital Structure</div>
+    <h1>Why Many Entrepreneurs Hold Too Much Cash</h1>
+    <p class="article-dek">Operating discipline ends at the company checking account. Over a decade, the gap between what idle cash earns and what it should earn is a real number.</p>
+  </div>
+</header>
+
+<section class="article-body">
+  <div class="container-narrow">
+
+    <p class="lede">The same owner who tracks gross margin to the basis point keeps $800,000 sitting in a sweep account earning forty basis points.</p>
+
+    <p>That's not a hypothetical. It's the single most common pattern among successful business owners, and it rarely gets questioned — because the cash isn't a mistake. It's a scar.</p>
+
+    <h2>Where the habit comes from</h2>
+    <p>Nobody builds a seven-figure cash cushion by accident. It's usually the residue of something real: a tight year that almost broke the business, a line of credit that got pulled at the worst possible moment, a partner who wanted out and had to be bought at a bad time. Once an owner has lived through a cash crunch, the instinct that follows is permanent. Keep more. Keep it liquid. Never be caught short again.</p>
+    <p>That instinct is correct — for the business. It's the same instinct that built the discipline to grow a company in the first place. The problem isn't that the owner values liquidity. The problem is that the same liquidity standard gets applied to every dollar, indefinitely, long after the specific risk that created the habit has passed.</p>
+
+    <h2>The math, not the story</h2>
+    <p>Operating discipline ends at the company checking account. Inside the business, every dollar is measured — margin, turns, return on invested capital. Outside it, in the account holding the reserve, the standard quietly drops to "it's safe" and stops there.</p>
+    <p>Here's what that actually costs. $800,000 earning 0.40% generates roughly $3,200 a year. The same amount in an instrument built for a defined time horizon — not exotic, not risky, just actually structured for when the money is needed — can reasonably target several percentage points more. Over a decade, that gap compounds into a number with six figures in it. Not because the market did anything unusual. Because the cash sat still while everything around it moved.</p>
+    <p>This isn't a market-risk conversation. It's a math conversation. Nobody is being asked to take on volatility they didn't sign up for. They're being asked to notice that "safe" and "correctly structured" are not the same thing.</p>
+
+    <h2>The real question isn't "how much cash" — it's "cash for what"</h2>
+    <p>Most owners think about this as a single number: how much should I keep. That's the wrong frame. The right frame is time horizon — when does each dollar actually need to be available.</p>
+
+    <table class="tier-table">
+      <thead>
+        <tr>
+          <th>If the money is needed...</th>
+          <th>It belongs in</th>
+          <th>Because</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Within 12 months</td>
+          <td>Operating Capital</td>
+          <td>Payroll, vendor terms, and near-term obligations can't tolerate any delay or risk</td>
+        </tr>
+        <tr>
+          <td>In 12&ndash;36 months</td>
+          <td>Safety Capital</td>
+          <td>Not needed tomorrow, not a forever asset &mdash; it can be working harder without taking on real risk</td>
+        </tr>
+        <tr>
+          <td>Not for years, if ever</td>
+          <td>Growth Capital</td>
+          <td>This is the money that should be growing, not sitting next to the operating account out of habit</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The $800,000 in the story above is almost never one homogeneous pile. Some of it genuinely needs to stay liquid — that portion is correctly placed as Operating Capital. The rest is Safety Capital or Growth Capital wearing an Operating Capital costume, because nobody ever separated it out.</p>
+
+    <h2>What "too much" actually looks like in practice</h2>
+    <p>A few patterns show up consistently once an owner actually breaks the number down:</p>
+    <ul>
+      <li><strong>The reserve that never shrinks.</strong> The business has grown, margins have improved, the balance sheet is stronger — but the Operating Capital cushion built during a leaner year has never been revisited. It's sized for a company that no longer exists.</li>
+      <li><strong>Cash funding two jobs at once.</strong> Some of that balance is quietly earmarked as "eventually I'll use this for X" — an acquisition, a distribution, a rainy day — without ever being separated into its own Safety or Growth Capital bucket with its own time horizon.</li>
+      <li><strong>No stated number at all.</strong> The most common pattern isn't "too much cash by a specific measure." It's that no one has ever actually calculated what the right Operating Capital reserve is, so the number simply grew alongside the business by default.</li>
+    </ul>
+
+    <div class="article-close">
+      <h2 style="margin-top:0;">The first step, not the whole plan</h2>
+      <p>None of this is an argument for taking money out of safety and putting it at risk. It's an argument for finding out which of those three tiers your cash is actually in — because right now, for most owners, all of it is being treated the same way regardless of when it's actually needed.</p>
+      <p>That's a five-minute exercise, not a strategy overhaul: take the cash balance, sort it by genuine time horizon, and see what's left over once the real 12-month number is isolated. For most owners, there's more sitting in Operating Capital than Operating Capital actually requires — and that's the part worth a second look.</p>
+    </div>
+
+    <p class="disclosure">This is general educational material and is not investment, tax, or legal advice. It does not account for your individual circumstances.</p>
+
+    <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="who">myBizStrategies</p>
+    <p>[Broker-dealer disclosure, securities-offered-through language, and any required approval reference go here before this piece is distributed.]</p>
+    <p style="margin-top:0.8rem;">&copy; 2026 Capital Strategy. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
