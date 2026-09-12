@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concentrated Wealth and the Business Owner's Dilemma — myBizStrategies</title>
+<meta name="description" content="If 80% of your net worth is in one illiquid asset, you don't have a diversified portfolio. You have a bet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C5A55A; --gold-light: #D9C484; --gold-dim: rgba(197,165,90,0.12); --gold-glow: rgba(197,165,90,0.06);
+  --dark: #0A0A09; --dark-elevated: #111110; --dark-card: #161614; --dark-border: #1E1E1C; --dark-border-light: #2A2A27;
+  --text-hero: #F5F2EB; --text-primary: #E0DCD3; --text-secondary: #9C9789; --text-muted: #6B6760; --white: #FFFFFF;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body { font-family:'Libre Franklin', sans-serif; background:var(--dark); color:var(--text-primary); line-height:1.75; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.container { max-width:1100px; margin:0 auto; padding:0 2rem; }
+.container-narrow { max-width:720px; margin:0 auto; padding:0 2rem; }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 0; background:rgba(10,10,9,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--dark-border); }
+nav .container { display:flex; align-items:center; justify-content:space-between; }
+.nav-brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:var(--text-hero); }
+.nav-brand-mark { width:28px; height:28px; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display', serif; font-size:0.8rem; font-weight:600; color:var(--gold); }
+.nav-brand-text { font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:500; letter-spacing:0.03em; }
+.nav-links { display:flex; align-items:center; gap:2.2rem; }
+.nav-links a { text-decoration:none; color:var(--text-secondary); font-size:0.82rem; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.25s; }
+.nav-links a:hover { color:var(--gold-light); }
+.nav-links a.active { color:var(--gold); }
+.article-header { padding:11rem 0 3rem; position:relative; overflow:hidden; }
+.article-header::before { content:''; position:absolute; top:-20%; right:-15%; width:50vw; height:50vw; background:radial-gradient(circle, var(--gold-glow) 0%, transparent 65%); pointer-events:none; }
+.article-header-content { position:relative; z-index:1; }
+.article-category { font-size:0.72rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem; display:flex; align-items:center; gap:1rem; }
+.article-category::before { content:''; display:block; width:40px; height:1px; background:var(--gold); }
+.article-header h1 { font-family:'Playfair Display', serif; font-size:clamp(2rem, 4.2vw, 3rem); font-weight:500; line-height:1.25; color:var(--text-hero); margin-bottom:1.2rem; }
+.article-dek { font-size:1.05rem; font-weight:300; color:var(--text-secondary); line-height:1.8; max-width:640px; }
+.article-body { padding:2rem 0 5rem; }
+.article-body p { font-size:1.05rem; color:var(--text-primary); margin-bottom:1.6rem; line-height:1.85; }
+.article-body h2 { font-family:'Playfair Display', serif; font-size:1.5rem; font-weight:500; color:var(--text-hero); margin:3rem 0 1.2rem; line-height:1.35; }
+.article-body .lede { font-size:1.25rem; color:var(--text-hero); font-weight:400; line-height:1.7; margin-bottom:2rem; }
+.article-body ul, .article-body ol { margin:0 0 1.8rem 0; padding:0; list-style:none; }
+.article-body ul li, .article-body ol li { position:relative; padding-left:1.6rem; margin-bottom:1.1rem; font-size:1.02rem; color:var(--text-primary); line-height:1.75; }
+.article-body ul li::before { content:''; position:absolute; left:0; top:0.65rem; width:6px; height:6px; background:var(--gold); border-radius:50%; }
+.article-body strong { color:var(--text-hero); font-weight:600; }
+.tier-table { width:100%; border-collapse:collapse; margin:2rem 0 2.5rem; border:1px solid var(--dark-border); }
+.tier-table th { text-align:left; font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); padding:0.9rem 1.2rem; border-bottom:1px solid var(--dark-border-light); background:var(--dark-elevated); }
+.tier-table td { padding:1rem 1.2rem; font-size:0.95rem; color:var(--text-primary); border-bottom:1px solid var(--dark-border); vertical-align:top; }
+.tier-table tr:last-child td { border-bottom:none; }
+.tier-table td:nth-child(2) { color:var(--gold-light); font-weight:600; }
+.article-close { border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:2.5rem; }
+.disclosure { font-size:0.8rem; color:var(--text-muted); font-style:italic; line-height:1.7; border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:1.5rem; }
+.back-link { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-secondary); text-decoration:none; margin-bottom:2.5rem; margin-top:6rem; transition:color 0.25s; }
+.back-link:hover { color:var(--gold-light); }
+footer { border-top:1px solid var(--dark-border); padding:2.5rem 0 3rem; font-size:0.8rem; color:var(--text-muted); line-height:1.7; }
+footer .who { color:var(--text-secondary); font-size:0.85rem; margin:0 0 0.7rem; }
+@media (max-width:640px) { .container, .container-narrow { padding:0 1.3rem; } .article-header { padding:8.5rem 0 2.5rem; } .nav-links { gap:1.2rem; } .nav-links a { font-size:0.72rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-mark">m</div>
+      <div class="nav-brand-text">myBizStrategies</div>
+    </a>
+    <div class="nav-links">
+      <a href="/#domains">The Six Domains</a>
+      <a href="/#capital-map">Capital Map</a>
+      <a href="/insights" class="active">Insights</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container-narrow article-header-content">
+    <a href="/insights" class="back-link" style="margin-top:0;">&larr; All Insights</a>
+    <div class="article-category">Capital Structure</div>
+    <h1>Concentrated Wealth and the Business Owner's Dilemma</h1>
+    <p class="article-dek">If 80% of your net worth is in one illiquid asset, you don't have a diversified portfolio. You have a bet.</p>
+  </div>
+</header>
+
+<section class="article-body">
+  <div class="container-narrow">
+
+    <p class="lede">If 80% of your net worth is in one illiquid asset, you don't have a diversified portfolio. You have a bet.</p>
+
+    <p>It might be a great bet. Most successful owners got where they are by concentrating risk, not diversifying it. Nobody builds a significant business by hedging their attention, their capital, and their time across a dozen ventures. Concentration is the strategy that worked &mdash; which is exactly what makes it so hard to question later.</p>
+
+    <h2>The moment nobody notices</h2>
+    <p>There's a point in every ownership story where concentration stops being a growth strategy and starts being an exposure. The problem is that this moment rarely announces itself. Revenue is still climbing. The business is still the best-performing asset in the owner's life. Every instinct says stay the course, because staying the course is what got here.</p>
+    <p>That's precisely why it gets missed. An owner will diversify a $500,000 investment portfolio without a second thought &mdash; different sectors, different managers, different asset classes &mdash; while leaving $8 million of net worth sitting in a single private company with no market, no buyer lined up, and no ability to sell a slice of it on a bad day. The portfolio gets the diversification discipline. The business, which is usually the much larger number, gets none.</p>
+
+    <h2>Reframing the question</h2>
+    <p>Most owners never actually run the comparison, because the business doesn't feel like "a stock." It feels like a life's work, a team, a set of relationships &mdash; not a line item with a concentration risk. That framing is understandable. It's also exactly what obscures the math.</p>
+    <p>Here's the version of the question that removes the emotional attachment: would you put 80% of your liquid net worth into a single publicly traded stock, if you knew you couldn't sell any of it for the next three years, no matter what happened to the business, the industry, or your own health?</p>
+    <p>Almost no one answers yes to that question. Yet it's a fair description of what many owners are already doing &mdash; they've just never framed the business in those terms, because it doesn't trade on an exchange and nobody sends a monthly statement showing the position size.</p>
+
+    <h2>What hedging a concentrated position actually looks like</h2>
+    <p>Diversifying away from a business you're actively building isn't realistic, and it isn't the point. The point is separating the growth of the business from the entirety of your financial life, so a single outcome &mdash; good or bad &mdash; doesn't determine everything at once.</p>
+
+    <table class="tier-table">
+      <thead>
+        <tr><th>The exposure</th><th>What it actually means</th><th>The starting question</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>All net worth tied to one company's value</td>
+          <td>If the business's value drops, so does essentially everything you own</td>
+          <td>What percentage of your total net worth sits outside the business today?</td>
+        </tr>
+        <tr>
+          <td>No liquidity until a sale</td>
+          <td>Every dollar of "wealth" is theoretical until a transaction happens, on someone else's timeline</td>
+          <td>If you needed $500,000 in cash tomorrow, where would it actually come from?</td>
+        </tr>
+        <tr>
+          <td>Personal and business risk are the same risk</td>
+          <td>A downturn, a lawsuit, or a lost contract hits your company and your household net worth simultaneously</td>
+          <td>Which of your personal assets are truly separate from the business's fortunes?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>None of this requires selling the business or slowing its growth. It requires building a second track &mdash; Safety and Growth Capital that lives outside the company, funded deliberately rather than left as whatever happens to accumulate. Every dollar that gets diversified out of the business is a dollar that no longer depends on the business being right.</p>
+
+    <div class="article-close">
+      <h2 style="margin-top:0;">The moment to act is before it's obvious</h2>
+      <p>Owners rarely start this process while the business is thriving, because thriving doesn't feel like risk. It gets started after a scare &mdash; a health issue, a partner dispute, an industry shock that reminds everyone how fast a "sure thing" can move. The owners who come out ahead are the ones who treat concentration as a standing question to revisit, not a one-time decision made in year two and never touched again.</p>
+      <p>The business can keep being the best investment you've ever made. That's not in question. The question is whether it's allowed to be the <em>only</em> one &mdash; and whether that was ever actually a decision, or just something that happened by default.</p>
+    </div>
+
+    <p class="disclosure">This is general educational material and is not investment, tax, or legal advice. It does not account for your individual circumstances.</p>
+
+    <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="who">myBizStrategies</p>
+    <p>[Broker-dealer disclosure, securities-offered-through language, and any required approval reference go here before this piece is distributed.]</p>
+    <p style="margin-top:0.8rem;">&copy; 2026 Capital Strategy. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
