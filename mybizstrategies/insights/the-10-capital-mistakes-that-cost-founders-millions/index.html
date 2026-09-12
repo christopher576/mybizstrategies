@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 10 Capital Mistakes That Cost Founders Millions — myBizStrategies</title>
+<meta name="description" content="None of these mistakes look dramatic while they're happening. That's exactly why they're expensive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C5A55A; --gold-light: #D9C484; --gold-dim: rgba(197,165,90,0.12); --gold-glow: rgba(197,165,90,0.06);
+  --dark: #0A0A09; --dark-elevated: #111110; --dark-card: #161614; --dark-border: #1E1E1C; --dark-border-light: #2A2A27;
+  --text-hero: #F5F2EB; --text-primary: #E0DCD3; --text-secondary: #9C9789; --text-muted: #6B6760; --white: #FFFFFF;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body { font-family:'Libre Franklin', sans-serif; background:var(--dark); color:var(--text-primary); line-height:1.75; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.container { max-width:1100px; margin:0 auto; padding:0 2rem; }
+.container-narrow { max-width:720px; margin:0 auto; padding:0 2rem; }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 0; background:rgba(10,10,9,0.85); backdrop-filter:blur(20px); border-bottom:1px solid var(--dark-border); }
+nav .container { display:flex; align-items:center; justify-content:space-between; }
+.nav-brand { display:flex; align-items:center; gap:0.6rem; text-decoration:none; color:var(--text-hero); }
+.nav-brand-mark { width:28px; height:28px; border:1.5px solid var(--gold); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display', serif; font-size:0.8rem; font-weight:600; color:var(--gold); }
+.nav-brand-text { font-family:'Playfair Display', serif; font-size:1.05rem; font-weight:500; letter-spacing:0.03em; }
+.nav-links { display:flex; align-items:center; gap:2.2rem; }
+.nav-links a { text-decoration:none; color:var(--text-secondary); font-size:0.82rem; font-weight:400; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.25s; }
+.nav-links a:hover { color:var(--gold-light); }
+.nav-links a.active { color:var(--gold); }
+.article-header { padding:11rem 0 3rem; position:relative; overflow:hidden; }
+.article-header::before { content:''; position:absolute; top:-20%; right:-15%; width:50vw; height:50vw; background:radial-gradient(circle, var(--gold-glow) 0%, transparent 65%); pointer-events:none; }
+.article-header-content { position:relative; z-index:1; }
+.article-category { font-size:0.72rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem; display:flex; align-items:center; gap:1rem; }
+.article-category::before { content:''; display:block; width:40px; height:1px; background:var(--gold); }
+.article-header h1 { font-family:'Playfair Display', serif; font-size:clamp(2rem, 4.2vw, 3rem); font-weight:500; line-height:1.25; color:var(--text-hero); margin-bottom:1.2rem; }
+.article-dek { font-size:1.05rem; font-weight:300; color:var(--text-secondary); line-height:1.8; max-width:640px; }
+.article-body { padding:2rem 0 5rem; }
+.article-body p { font-size:1.05rem; color:var(--text-primary); margin-bottom:1.6rem; line-height:1.85; }
+.article-body strong { color:var(--text-hero); font-weight:600; }
+.mistake { border-bottom:1px solid var(--dark-border); padding:2rem 0; display:flex; gap:1.5rem; }
+.mistake-num { font-family:'Playfair Display', serif; font-size:2rem; color:var(--gold); flex-shrink:0; width:2.5rem; line-height:1; }
+.mistake-body h2 { font-family:'Playfair Display', serif; font-size:1.25rem; font-weight:500; color:var(--text-hero); margin-bottom:0.7rem; line-height:1.35; }
+.mistake-body p { margin-bottom:0; font-size:1rem; }
+.mistake-body a { color:var(--gold-light); text-decoration:none; border-bottom:1px solid var(--gold-dim); }
+.mistake-body a:hover { border-bottom-color:var(--gold); }
+.article-close { border-top:1px solid var(--dark-border); margin-top:1rem; padding-top:2.5rem; }
+.disclosure { font-size:0.8rem; color:var(--text-muted); font-style:italic; line-height:1.7; border-top:1px solid var(--dark-border); margin-top:3rem; padding-top:1.5rem; }
+.back-link { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-secondary); text-decoration:none; margin-bottom:2.5rem; margin-top:6rem; transition:color 0.25s; }
+.back-link:hover { color:var(--gold-light); }
+footer { border-top:1px solid var(--dark-border); padding:2.5rem 0 3rem; font-size:0.8rem; color:var(--text-muted); line-height:1.7; }
+footer .who { color:var(--text-secondary); font-size:0.85rem; margin:0 0 0.7rem; }
+@media (max-width:640px) { .container, .container-narrow { padding:0 1.3rem; } .article-header { padding:8.5rem 0 2.5rem; } .nav-links { gap:1.2rem; } .nav-links a { font-size:0.72rem; } .mistake { gap:1rem; } .mistake-num { font-size:1.5rem; width:2rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-mark">m</div>
+      <div class="nav-brand-text">myBizStrategies</div>
+    </a>
+    <div class="nav-links">
+      <a href="/#domains">The Six Domains</a>
+      <a href="/#capital-map">Capital Map</a>
+      <a href="/insights" class="active">Insights</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container-narrow article-header-content">
+    <a href="/insights" class="back-link" style="margin-top:0;">&larr; All Insights</a>
+    <div class="article-category">Business Owner Insights</div>
+    <h1>The 10 Capital Mistakes That Cost Founders Millions</h1>
+    <p class="article-dek">None of these mistakes look dramatic while they're happening. That's exactly why they're expensive.</p>
+  </div>
+</header>
+
+<section class="article-body">
+  <div class="container-narrow">
+
+    <p>Each one is a quiet, reasonable-seeming decision that compounds for years before the cost becomes visible.</p>
+
+    <div class="mistake">
+      <div class="mistake-num">01</div>
+      <div class="mistake-body">
+        <h2>Letting cash sit idle with no time-horizon plan</h2>
+        <p>The same discipline that tracks margin to the basis point inside the business often disappears entirely once money leaves it. Cash sitting in a low-yield account, with no distinction between what's needed in 12 months and what could be working harder for years, quietly costs six figures over a decade. See: <a href="/insights/why-entrepreneurs-hold-too-much-cash/">Why Many Entrepreneurs Hold Too Much Cash</a>.</p>
+      </div>
+    </div>
+
+    <div class="mistake">
+      <div class="mistake-num">02</div>
+      <div class="mistake-body">
+        <h2>Personal guarantees nobody has revisited</h2>
+        <p>Nearly every credit line, mortgage, and SBA loan comes with a personal guarantee attached. That guarantee doesn't shrink as personal wealth grows &mdash; it just quietly represents a larger and larger exposure that was never re-evaluated after the day it was signed.</p>
+      </div>
+    </div>
+
+    <div class="mistake">
+      <div class="mistake-num">03</div>
+      <div class="mistake-body">
+        <h2>A buy-sell agreement with no funding behind it</h2>
+        <p>An agreement drafted years ago, never updated as the business grew, with no actual mechanism for the surviving partners to pay what it requires. A legal document without funding behind it isn't a plan. It's a promise nobody can necessarily keep.</p>
+      </div>
+    </div>
+
+    <div class="mistake">
+      <div class="mistake-num">04</div>
+      <div class="mistake-body">
+        <h2>No income protection against disability</h2>
+        <p>Owners insure the building, the equipment, the receivables. The income stream that funds all of it &mdash; and the eventual exit &mdash; is often the one asset left completely exposed. Disability is statistically more likely than death, and often more financially destructive to a business.</p>
+      </div>
+    </div>
+
+    <div class="mistake">
+      <div class="mistake-num">05</div>
+      <div class="mistake-body">
+        <h2>Treating "I'll sell the business" as the entire retirement plan</h2>
+        <p>A single transaction, with one buyer, at one moment in time, at a multiple nobody controls. When the timing gets forced by health, a partner dispute, or a market shift, there's no Plan B &mdash; because there was never a Plan A that existed outside the business itself.</p>
+      </div>
+    </div>
+
+    <div class="mistake">
+      <div class="mistake-num">06</div>
+      <div class="mistake-body">
+        <h2>An estate plan that ignores the tax deadline</h2>
+        <p>The IRS doesn't accept business equity as payment. It wants cash, often within nine months of death. An estate plan that doesn't account for where that cash actually comes from leaves heirs choosing between a forced discounted sale and borrowing against something illiquid.</p>
+      </div>
+    </div>
+
+    <div class="mistake">
+      <div class="mistake-num">07</div>
+      <div class="mistake-body">
+        <h2>Eighty percent of net worth in one illiquid asset, unhedged</h2>
+        <p>A concentrated bet is how most owners got here &mdash; that's not the mistake. The mistake is never revisiting the position as it grows, and never asking whether the exposure would still make sense if it were a single publicly traded stock instead of a private company. See: <a href="/insights/concentrated-wealth-and-the-business-owners-dilemma/">Concentrated Wealth and the Business Owner's Dilemma</a>.</p>
+      </div>
+    </div>
+
+    <div class="mistake">
+      <div class="mistake-num">08</div>
+      <div class="mistake-body">
+        <h2>A vendor list instead of a coordinated team</h2>
+        <p>A CPA, an attorney, and an investment advisor who have never spoken to one another are three specialists doing isolated, competent work &mdash; and missing the gaps between their individual pieces, which is exactly where the expensive mistakes live. See: <a href="/insights/building-the-right-advisory-team-for-capital-decisions/">Building the Right Advisory Team for Capital Decisions</a>.</p>
+      </div>
+    </div>
+
+    <div class="mistake">
+      <div class="mistake-num">09</div>
+      <div class="mistake-body">
+        <h2>Waiting for a deal before thinking about exit tax structure</h2>
+        <p>Most of the meaningful tax efficiency available in a sale requires lead time measured in years, not the weeks between a signed letter of intent and closing. By the time a deal exists, the best structural options are frequently already off the table. See: <a href="/insights/tax-efficient-exit-structures/">Tax-Efficient Exit Structures</a>.</p>
+      </div>
+    </div>
+
+    <div class="mistake" style="border-bottom:none;">
+      <div class="mistake-num">10</div>
+      <div class="mistake-body">
+        <h2>No plan for what happens after the money arrives</h2>
+        <p>The 90 days after a liquidity event are often more consequential than the sale itself &mdash; and the least prepared for. A sudden lump sum rewards patience and sorting by time horizon; the instincts that built the business often reward the opposite. See: <a href="/insights/what-happens-financially-after-selling-a-business/">What Happens Financially After Selling a Business</a>.</p>
+      </div>
+    </div>
+
+    <div class="article-close">
+      <p><strong>The pattern underneath all ten:</strong> every mistake on this list is a version of the same thing &mdash; a decision that made sense at the time it was made, and was never revisited as circumstances changed. None of them require a dramatic fix. Most require an hour of honest review and, in a few cases, a conversation with the right advisor before the mistake becomes permanent instead of merely present.</p>
+    </div>
+
+    <p class="disclosure">This is general educational material and is not investment, tax, or legal advice. It does not account for your individual circumstances.</p>
+
+    <a href="/insights" class="back-link">&larr; All Insights</a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="who">myBizStrategies</p>
+    <p>[Broker-dealer disclosure, securities-offered-through language, and any required approval reference go here before this piece is distributed.]</p>
+    <p style="margin-top:0.8rem;">&copy; 2026 Capital Strategy. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
