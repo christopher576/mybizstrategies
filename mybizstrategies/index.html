@@ -447,11 +447,11 @@ footer { padding:4rem 0 3rem; border-top:1px solid var(--dark-border); }
         <div class="section-label">Free Resource</div>
         <h2>The Business Owner Capital Map</h2>
         <p>A strategic framework for organizing capital across three tiers &mdash; Operating, Safety, and Growth &mdash; mapped to your time horizon and business phase. Not a brochure. A working tool.</p>
-        <form class="cm-form" id="cm-form" action="https://formspree.io/f/mykvgjov" method="POST">
+        <form class="cm-form" id="cm-form" name="capital-map-download" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/capital-map-thank-you">
           <input type="text" name="name" placeholder="First name" aria-label="First name" required>
           <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-          <input type="hidden" name="_subject" value="New Capital Map Download">
-          <input type="hidden" name="_next" value="https://mybizstrategies.com/capital-map-thank-you">
+          <input type="hidden" name="form-name" value="capital-map-download">
+          <p style="position:absolute;left:-9999px;">Leave this empty: <input name="bot-field"></p>
           <button type="submit" id="cm-submit">Download the Capital Map</button>
           <div class="cm-form-note" id="cm-note">No spam. Unsubscribe anytime.</div>
         </form>
@@ -532,10 +532,10 @@ if (cmForm) {
     cmSubmit.textContent = 'Sending\u2026';
     cmSubmit.disabled = true;
     try {
-      const res = await fetch(cmForm.action, {
+      const res = await fetch('/', {
         method: 'POST',
-        body: new FormData(cmForm),
-        headers: { 'Accept': 'application/json' }
+        body: new URLSearchParams(new FormData(cmForm)).toString(),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });
       if (res.ok) {
         cmForm.style.display = 'none';
