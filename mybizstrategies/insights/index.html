@@ -355,10 +355,9 @@ footer { padding:4rem 0 3rem; border-top:1px solid var(--dark-border); }
   <div class="container-narrow">
     <h2>Capital Strategy Briefing</h2>
     <p>Frameworks, perspectives, and strategic thinking — delivered when there's something worth saying.</p>
-    <div class="newsletter-form">
-      <input type="email" placeholder="Your email address" aria-label="Email address">
-      <button type="button">Subscribe</button>
-    </div>
+    <form class="newsletter-form" id="newsletter-form" name="newsletter-subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="newsletter-subscribe"><p style="position:absolute;left:-9999px;">Leave this empty: <input name="bot-field"></p>
+      <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required id="newsletter-email">
+      <button type="submit" id="newsletter-submit">Subscribe</button></form><div class="newsletter-form" id="newsletter-success" style="display:none;"><p style="color:var(--gold-light);margin:0;">You're subscribed. Thanks for joining.</p></div>
   </div>
 </section>
 
@@ -387,7 +386,7 @@ document.querySelectorAll('.article-card, .featured-card').forEach(el => { el.st
 
 const s = document.createElement('style');
 s.textContent = '@media(max-width:640px){.nav-links.mobile-open{display:flex!important;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,9,0.97);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--dark-border);}}';
-document.head.appendChild(s);
+document.head.appendChild(s); const nlForm=document.getElementById('newsletter-form'); const nlSuccess=document.getElementById('newsletter-success'); const nlSubmit=document.getElementById('newsletter-submit'); if(nlForm){nlForm.addEventListener('submit', async function(e){e.preventDefault(); nlSubmit.textContent='Sending…'; nlSubmit.disabled=true; try{const res=await fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(nlForm)).toString()}); if(res.ok){nlForm.style.display='none'; nlSuccess.style.display='block';} else{nlSubmit.textContent='Try again'; nlSubmit.disabled=false;}} catch(err){nlSubmit.textContent='Try again'; nlSubmit.disabled=false;}});}
 </script>
 
 </body>
