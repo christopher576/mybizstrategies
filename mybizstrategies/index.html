@@ -447,18 +447,18 @@ footer { padding:4rem 0 3rem; border-top:1px solid var(--dark-border); }
         <div class="section-label">Free Resource</div>
         <h2>The Business Owner Capital Map</h2>
         <p>A strategic framework for organizing capital across three tiers &mdash; Operating, Safety, and Growth &mdash; mapped to your time horizon and business phase. Not a brochure. A working tool.</p>
-        <form class="cm-form" id="cm-form" name="capital-map-download" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/capital-map-thank-you">
-          <input type="text" name="name" placeholder="First name" aria-label="First name" required>
-          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-          <input type="hidden" name="form-name" value="capital-map-download">
+        <form class="cm-form" id="cm-form" name="capital-map-diagnostic" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/capital-map-thank-you">
+          <input type="text" name="first_name" placeholder="First name" aria-label="First name" required><input type="text" name="last_name" placeholder="Last name" aria-label="Last name" required>
+          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required><select name="situation" required><option value="" selected disabled>What fits you best right now?</option><option>I own a business</option><option>I'm within a few years of retiring</option><option>I have a 401(k) or CD I haven't decided about</option><option>I refer clients to advisors</option><option>Something else</option></select>
+          <input type="hidden" name="form-name" value="capital-map-diagnostic">
           <p style="position:absolute;left:-9999px;">Leave this empty: <input name="bot-field"></p>
-          <button type="submit" id="cm-submit">Download the Capital Map</button>
+          <button type="submit" id="cm-submit">Get the diagnostic</button>
           <div class="cm-form-note" id="cm-note">No spam. Unsubscribe anytime.</div>
         </form>
         <div class="cm-form" id="cm-success" style="display:none;">
-          <p style="color:var(--gold-light);font-size:0.95rem;font-weight:500;margin-bottom:0.8rem;">You're all set.</p>
+          <p style="color:var(--gold-light);font-size:0.95rem;font-weight:500;margin-bottom:0.8rem;">Here it is</p>
           <p style="color:var(--text-secondary);font-size:0.88rem;font-weight:300;line-height:1.7;">Check your inbox — the Capital Map is on its way. If you don't see it in a few minutes, check your spam folder.</p>
-          <a href="/assets/Capital_Map_Business_Owner.pdf" download style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.6rem;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Download directly instead <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/capital-map-diagnostic.html" style="margin-top:1rem;display:inline-flex;align-items:center;gap:0.6rem;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Download directly instead <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
       <div class="cm-visual">
