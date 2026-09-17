@@ -447,7 +447,7 @@ footer { padding:4rem 0 3rem; border-top:1px solid var(--dark-border); }
         <div class="section-label">Free Resource</div>
         <h2>The Business Owner Capital Map</h2>
         <p>A strategic framework for organizing capital across three tiers &mdash; Operating, Safety, and Growth &mdash; mapped to your time horizon and business phase. Not a brochure. A working tool.</p>
-        <form class="cm-form" id="cm-form" name="capital-map-diagnostic" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/capital-map-thank-you">
+        <form class="cm-form" id="cm-form" name="capital-map-diagnostic" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
           <input type="text" name="first_name" placeholder="First name" aria-label="First name" required><input type="text" name="last_name" placeholder="Last name" aria-label="Last name" required>
           <input type="email" name="email" placeholder="Email address" aria-label="Email address" required><select name="situation" required><option value="" selected disabled>What fits you best right now?</option><option>I own a business</option><option>I'm within a few years of retiring</option><option>I have a 401(k) or CD I haven't decided about</option><option>I refer clients to advisors</option><option>Something else</option></select>
           <input type="hidden" name="form-name" value="capital-map-diagnostic">
@@ -522,7 +522,7 @@ const s = document.createElement('style');
 s.textContent = '@media(max-width:640px){.nav-links.mobile-open{display:flex!important;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,9,0.97);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--dark-border);}}';
 document.head.appendChild(s);
 
-// Capital Map form — AJAX Formspree submission
+// Capital Map form — Netlify form, AJAX submission (no page reload)
 const cmForm = document.getElementById('cm-form');
 const cmSuccess = document.getElementById('cm-success');
 const cmSubmit = document.getElementById('cm-submit');
